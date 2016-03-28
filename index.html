@@ -3,6 +3,7 @@
  
 <body>
     MASTER BRANCH
+    <p id="target"></p>
     <p id="demo"></p>
     <script src="http://test-ws-server-staging-anandkumarpatel.runnablecloud.com:80/primus/primus.js"></script>
     <script>
@@ -16,6 +17,15 @@
     primus.on("data", function(data) {
         document.getElementById("demo").innerHTML += data + "<br>";
     })
+    
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange=function() {
+      if (xhttp.readyState == 4 && xhttp.status == 200) {
+        document.getElementById("target").innerHTML = xhttp.responseText;
+      }
+    };
+    xhttp.open("GET", "http://test-ws-server-staging-anandkumarpatel.runnablecloud.com:80/test/path", true);
+    xhttp.send();
     </script>
 </body>
 
