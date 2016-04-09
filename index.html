@@ -4,10 +4,10 @@
 <body>
     NATHAN BRANCH
     <p id="demo"></p>
-    <script src="http://test-ws-server-staging-runnable.runnable.ninja:3000/primus/primus.js"></script>
+    <script src="http://test-ws-server-staging-runnable.runnablecloud.com/primus/primus.js"></script>
     <script>
     // connect to current URL
-    var primus = Primus.connect("http://test-ws-server-staging-runnable.runnable.ninja:3000")
+    var primus = Primus.connect("http://test-ws-server-staging-runnable.runnablecloud.com")
 
     primus.on("open", function() {
         console.log("Connected!")
