@@ -5,7 +5,7 @@
     MASTER BRANCH
     <p id="target"></p>
     <p id="demo"></p>
-    <script src="http://test-ws-server-staging-runnable.runnable.ninja:80/primus/primus.js"></script>
+    <script src="http://test-ws-server-staging-runnable.runnablecloud.com:80/primus/primus.js"></script>
     <script>
     // connect to current URL
     var primus = Primus.connect("http://test-ws-server-staging-runnable.runnable.ninja:80")
@@ -24,7 +24,7 @@
         document.getElementById("target").innerHTML = xhttp.responseText;
       }
     };
-    xhttp.open("GET", "http://test-ws-server-staging-runnable.runnable.ninja:80/test/path", true);
+    xhttp.open("GET", "http://test-ws-server-staging-runnable.runnablecloud.com:80/test/path", true);
     xhttp.send();
     </script>
 </body>
